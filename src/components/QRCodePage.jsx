@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ShieldCheck, Smartphone } from "lucide-react"; 
-import QRCode from "../assets/qr-code.png";
+import QRCode from "../assets/qr-code.png"; // Your QR code image
 
 const QRCodePage = () => {
   const navigate = useNavigate();
