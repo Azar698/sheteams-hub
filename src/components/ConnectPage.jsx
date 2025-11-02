@@ -1,14 +1,14 @@
 import React from "react";
-import { ArrowLeft} from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
-// Social media icons (your own images)
+// Social media icons
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import twitter from "../assets/twitter.png";
 import youtube from "../assets/youtube.png";
 import globe from "../assets/globe.png";
-
 
 // Logos
 import cyberCrimeLogo from "../assets/cybercrime-logo.png";
@@ -26,7 +26,7 @@ const ConnectPage = () => {
     {
       icon: facebook,
       label: "Facebook",
-      link: "https://www.facebook.com/sheteamhyd?rdid=WEXV2C5oxqLhWIR2&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Bd29uKbMn%2F#",
+      link: "https://www.facebook.com/sheteamhyd",
     },
     { icon: twitter, label: "Twitter", link: "https://x.com/hydsheteam" },
     { icon: youtube, label: "YouTube", link: "#" },
@@ -46,28 +46,58 @@ const ConnectPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F4F5F6] flex flex-col items-center py-10 px-6">
+    <motion.div
+      className="min-h-screen bg-[#F4F5F6] flex flex-col items-center py-10 px-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       {/* Back Button */}
-      <button
+      <motion.button
         onClick={() => navigate("/")}
         className="flex items-center gap-2 text-gray-600 mb-6 self-start hover:text-black"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         <ArrowLeft size={20} /> Back
-      </button>
+      </motion.button>
 
-      <h1 className="text-3xl font-bold mb-8 text-[#1B1F23]">
+      <motion.h1
+        className="text-3xl font-bold mb-8 text-[#1B1F23]"
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
         Connect with Us
-      </h1>
+      </motion.h1>
 
-      <div className="grid md:grid-cols-2 gap-8 w-full max-w-4xl">
+      <motion.div
+        className="grid md:grid-cols-2 gap-8 w-full max-w-4xl"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.2 },
+          },
+        }}
+      >
         {/* SHE Teams Section */}
-        <div className="bg-[#1B1F23] text-white p-8 rounded-2xl shadow-lg">
-          <img
+        <motion.div
+          className="bg-[#1B1F23] text-white p-8 rounded-2xl shadow-lg"
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.img
             src={sheTeamsLogo}
             className="w-20 h-20 object-contain rounded-full bg-[#F4F5F6]"
             alt="SHE Teams logo"
+            whileHover={{ rotate: 10 }}
           />
-          <h2 className="text-xl font-semibold mb-4 text-[#D8FF57]">
+          <h2 className="text-xl font-semibold mb-4 text-[#D8FF57] mt-4">
             SHE Teams
           </h2>
           <p className="text-gray-300 mb-6">
@@ -75,12 +105,14 @@ const ConnectPage = () => {
           </p>
           <div className="space-y-4">
             {sheTeamsLinks.map((item, i) => (
-              <a
+              <motion.a
                 key={i}
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 bg-[#2F343A] hover:bg-[#D8FF57] hover:text-black transition p-3 rounded-xl"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 <img
                   src={item.icon}
@@ -88,19 +120,27 @@ const ConnectPage = () => {
                   className="w-8 h-8 object-contain"
                 />
                 <span>{item.label}</span>
-              </a>
+              </motion.a>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Cyber Crime Section */}
-        <div className="bg-[#1B1F23] text-white p-8 rounded-2xl shadow-lg">
-          <img
+        <motion.div
+          className="bg-[#1B1F23] text-white p-8 rounded-2xl shadow-lg"
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.img
             src={cyberCrimeLogo}
             alt="Cyber crime logo"
             className="w-20 h-20 object-contain rounded-full bg-[#F4F5F6] p-2"
+            whileHover={{ rotate: 10 }}
           />
-          <h2 className="text-xl font-semibold mb-4 text-[#D8FF57]">
+          <h2 className="text-xl font-semibold mb-4 text-[#D8FF57] mt-4">
             Cyber Crime
           </h2>
           <p className="text-gray-300 mb-6">
@@ -108,12 +148,14 @@ const ConnectPage = () => {
           </p>
           <div className="space-y-4">
             {cyberCrimeLinks.map((item, i) => (
-              <a
+              <motion.a
                 key={i}
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 bg-[#2F343A] hover:bg-[#D8FF57] hover:text-black transition p-3 rounded-xl"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 <img
                   src={item.icon}
@@ -121,16 +163,21 @@ const ConnectPage = () => {
                   className="w-8 h-8 object-contain"
                 />
                 <span>{item.label}</span>
-              </a>
+              </motion.a>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <footer className="text-gray-500 text-sm mt-10">
+      <motion.footer
+        className="text-gray-500 text-sm mt-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+      >
         © 2025 TS Police | All Rights Reserved.
-      </footer>
-    </div>
+      </motion.footer>
+    </motion.div>
   );
 };
 

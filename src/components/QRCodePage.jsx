@@ -1,56 +1,86 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ShieldCheck, Smartphone } from "lucide-react"; 
-import QRCode from "../assets/qr-code.png"; // Your QR code image
+import { ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import QRCode from "../assets/qr-code.png"; // your QR image
 
 const QRCodePage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#1B1F23] text-white px-6">
-      <div className="bg-[#2F343A] p-8 rounded-3xl shadow-2xl flex flex-col items-center text-center w-full max-w-md border border-[#D8FF57]/40">
+    <div className="min-h-screen flex items-center justify-center bg-[#1B1F23] text-white px-6 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 50, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="bg-[#2F343A] p-8 rounded-3xl shadow-2xl flex flex-col items-center text-center w-full max-w-md border border-[#D8FF57]/40"
+      >
         {/* Security Badge */}
-        <div className="flex items-center gap-2 mb-4 text-[#D8FF57] text-sm font-medium">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="flex items-center gap-2 mb-4 text-[#D8FF57] text-sm font-medium"
+        >
           <ShieldCheck size={18} />
           <span>Official Telangana Police Portal</span>
-        </div>
+        </motion.div>
 
-        {/* Animated Scanner Vector */}
-        <div className="relative mb-6">
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-[#D8FF57] animate-pulse">
-            <Smartphone size={28} className="mx-auto mb-2" />
-            <p className="text-xs tracking-wide">Scan QR to Connect</p>
-          </div>
-
+        {/* QR Section */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.6, type: "spring", stiffness: 120 }}
+          className="relative mb-6"
+        >
           <div className="bg-white p-4 rounded-xl shadow-inner">
-            <img
+            <motion.img
               src={QRCode}
               alt="QR Code"
               className="w-46 h-48 rounded-lg"
             />
           </div>
-        </div>
+
+          {/* Glow effect */}
+          <motion.div
+            className="absolute inset-0 rounded-xl bg-[#D8FF57]/10 blur-2xl -z-10"
+            animate={{ opacity: [0.4, 0.8, 0.4] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+          />
+        </motion.div>
 
         {/* Text Section */}
-        <h1 className="text-2xl font-semibold mb-2">Connect Securely ✨</h1>
-        <p className="text-gray-400 mb-6 text-sm">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="text-gray-400 mb-6 text-sm"
+        >
           Scan the QR to access official SHE Teams & Cyber crime awareness
           channels.
-        </p>
+        </motion.p>
 
         {/* Button */}
-        <button
+        <motion.button
           onClick={() => navigate("/connect")}
-          className="bg-[#D8FF57] text-black font-semibold py-3 px-8 rounded-full hover:scale-105 transition-transform"
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 150 }}
+          className="bg-[#D8FF57] text-black font-semibold py-3 px-8 rounded-full hover:shadow-lg hover:shadow-[#D8FF57]/30 transition-all"
         >
-          Continue to Connect
-        </button>
+          Click to Connect
+        </motion.button>
 
         {/* Footer */}
-        <p className="text-gray-500 text-xs mt-8">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="text-gray-500 text-xs mt-8"
+        >
           © 2025 Telangana Police | SHE Teams & Cybercrime Division
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </div>
   );
 };
