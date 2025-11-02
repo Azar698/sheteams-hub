@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+/* Pastel animated gradient background */
+:root{
+  --g1: #f7f3ff; /* lavender */
+  --g2: #e6fbff; /* teal */
+  --g3: #fff7f0; /* soft peach */
+}
+
+/* gradient animation */
+.bg-animated {
+  background: linear-gradient(120deg, var(--g1), var(--g2), var(--g3));
+  background-size: 600% 600%;
+  animation: gradientShift 18s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+/* subtle glass card */
+.glass {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* card shadow + border for lite depth */
+.card {
+  box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+}
+
+/* link button style */
+.link-btn {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.link-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+/* small responsive helpers */
+@media (min-width: 768px) {
+  .container-md { max-width: 720px; }
+}
