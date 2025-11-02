@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ShieldCheck, Smartphone } from "lucide-react"; // icons just for trust feel
+import { ShieldCheck, Smartphone } from "lucide-react"; 
+import QRCode from "../assets/qr-code.png";
 
 const QRCodePage = () => {
   const navigate = useNavigate();
@@ -17,15 +18,15 @@ const QRCodePage = () => {
         {/* Animated Scanner Vector */}
         <div className="relative mb-6">
           <div className="absolute -top-10 left-1/2 -translate-x-1/2 text-[#D8FF57] animate-pulse">
-            <Smartphone size={28} className="mx-auto mb-1" />
+            <Smartphone size={28} className="mx-auto mb-2" />
             <p className="text-xs tracking-wide">Scan QR to Connect</p>
           </div>
 
           <div className="bg-white p-4 rounded-xl shadow-inner">
             <img
-              src="/qr-code.png"
+              src={QRCode}
               alt="QR Code"
-              className="w-46 h-46 rounded-lg"
+              className="w-46 h-48 rounded-lg"
             />
           </div>
         </div>
@@ -33,7 +34,7 @@ const QRCodePage = () => {
         {/* Text Section */}
         <h1 className="text-2xl font-semibold mb-2">Connect Securely ✨</h1>
         <p className="text-gray-400 mb-6 text-sm">
-          Scan the QR to access official SHE Teams & Cybercrime awareness
+          Scan the QR to access official SHE Teams & Cyber crime awareness
           channels.
         </p>
 
