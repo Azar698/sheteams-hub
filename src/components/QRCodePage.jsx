@@ -23,7 +23,7 @@ const QRCodePage = () => {
           className="flex items-center gap-2 mb-4 text-[#D8FF57] text-sm font-medium"
         >
           <ShieldCheck size={18} />
-          <span> Be Alert, Stay Safe - Telangana Police</span>
+          <span> Be Alert, Stay Safe - Cyber Crime Hyderabad</span>
         </motion.div>
 
         {/* QR Section */}
@@ -78,7 +78,8 @@ const QRCodePage = () => {
           transition={{ delay: 1 }}
           className="text-gray-500 text-xs mt-8"
         >
-          © 2025 Telangana Police | Cyber Crime Division & SHE Teams
+          © 2025 Cyber Crime Division & SHE Teams, Hyderabad | All Rights
+          Reserved.
         </motion.p>
       </motion.div>
     </div>

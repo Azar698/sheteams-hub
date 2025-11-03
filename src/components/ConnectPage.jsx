@@ -201,12 +201,12 @@ const ConnectPage = () => {
       </motion.div>
 
       <motion.footer
-        className="text-gray-500 text-sm mt-10"
+        className="text-gray-500 text-sm mt-10 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
-        © 2025 Cyber Crime Division & SHE Teams | All Rights Reserved.
+        © 2025 Cyber Crime Division & SHE Teams, Hyderabad | All Rights Reserved.
       </motion.footer>
     </motion.div>
   );
