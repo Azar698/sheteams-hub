@@ -78,7 +78,7 @@ const QRCodePage = () => {
           transition={{ delay: 1 }}
           className="text-gray-500 text-xs mt-8"
         >
-          © 2025 Telangana Police | SHE Teams & Cybercrime Division
+          © 2025 Telangana Police | Cyber Crime Division & SHE Teams
         </motion.p>
       </motion.div>
     </div>
