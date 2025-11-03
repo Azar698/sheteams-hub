@@ -23,7 +23,7 @@ const QRCodePage = () => {
           className="flex items-center gap-2 mb-4 text-[#D8FF57] text-sm font-medium"
         >
           <ShieldCheck size={18} />
-          <span>Official Telangana Police Portal</span>
+          <span> Be Alert, Stay Safe - Telangana Police</span>
         </motion.div>
 
         {/* QR Section */}
@@ -56,8 +56,8 @@ const QRCodePage = () => {
           transition={{ delay: 0.8 }}
           className="text-gray-400 mb-6 text-sm"
         >
-          Scan the QR to access official SHE Teams & Cyber crime awareness
-          channels.
+          Scan the QR to access official SHE Teams and Cyber Crime channels for
+          safety updates and support.
         </motion.p>
 
         {/* Button */}

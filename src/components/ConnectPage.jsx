@@ -83,13 +83,22 @@ const ConnectPage = () => {
       </motion.button>
 
       <motion.h1
-        className="text-3xl font-bold mb-8 text-[#1B1F23]"
+        className="text-3xl font-bold mb-5 text-[#1B1F23]"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        Connect with Us
+        Be Alert and Stay Safe
       </motion.h1>
+
+      <motion.p
+        className="text-md font-semibold mb-8 text-[#1B1F23]"
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Stay Connected with Us for Updates.
+      </motion.p>
 
       <motion.div
         className="grid md:grid-cols-2 gap-8 w-full max-w-4xl"
@@ -121,7 +130,8 @@ const ConnectPage = () => {
             Cyber Crime
           </h2>
           <p className="text-gray-300 mb-6">
-            Reach official cybercrime units for digital safety and reporting.
+            Reach out to our official cyber crime social media channels for
+            online safety and reporting.
           </p>
           <div className="space-y-4">
             {cyberCrimeLinks.map((item, i) => (
@@ -164,7 +174,8 @@ const ConnectPage = () => {
             SHE Teams
           </h2>
           <p className="text-gray-300 mb-6">
-            Stay connected with SHE Teams and follow their awareness programs.
+            Stay connected with our SHE Teams through official social media
+            channels for awareness and assistance.
           </p>
           <div className="space-y-4">
             {sheTeamsLinks.map((item, i) => (
@@ -195,8 +206,7 @@ const ConnectPage = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
-        © 2025 Cyber Crime Division & SHE Teams | All Rights
-        Reserved.
+        © 2025 Cyber Crime Division & SHE Teams | All Rights Reserved.
       </motion.footer>
     </motion.div>
   );
