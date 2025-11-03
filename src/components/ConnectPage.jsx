@@ -38,11 +38,23 @@ const ConnectPage = () => {
   ];
 
   const cyberCrimeLinks = [
-    { icon: instagram, label: "Instagram", link: "#" },
-    { icon: facebook, label: "Facebook", link: "#" },
-    { icon: twitter, label: "Twitter", link: "#" },
-    { icon: youtube, label: "YouTube", link: "#" },
-    { icon: globe, label: "Website", link: "#" },
+    {
+      icon: instagram,
+      label: "Instagram",
+      link: "https://www.instagram.com/cybercrimes.cyberabad/",
+    },
+    {
+      icon: facebook,
+      label: "Facebook",
+      link: "https://www.facebook.com/cybercrimepshyd/",
+    },
+    { icon: twitter, label: "Twitter", link: "https://x.com/cybercrimeshyd" },
+    { icon: youtube, label: "YouTube", link: "" },
+    {
+      icon: globe,
+      label: "Website",
+      link: "https://hyderabadpolice.gov.in/index.html",
+    },
   ];
 
   return (
