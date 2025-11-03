@@ -37,7 +37,8 @@ const NotFound = () => {
       </motion.div>
 
       <p className="text-gray-500 text-xs mt-8">
-        © 2025 CyberLink Hub | SHE Teams & Cyber Crime Division
+        © 2025 Cyber Crime Division & SHE Teams, Hyderabad | All Rights
+        Reserved.
       </p>
     </div>
   );

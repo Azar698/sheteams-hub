@@ -56,7 +56,7 @@ const QRCodePage = () => {
           transition={{ delay: 0.8 }}
           className="text-gray-400 mb-6 text-sm"
         >
-          Scan the QR to access official SHE Teams and Cyber Crime channels for
+          Scan the QR to access official Cyber Crime and SHE Teams channels for
           safety updates and support.
         </motion.p>
 
