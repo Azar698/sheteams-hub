@@ -37,7 +37,7 @@ const ConnectPage = () => {
     {
       icon: globe,
       label: "Website",
-      link: "https://womensafetywing.telangana.gov.in/she-module/she-teams/",
+      link: "https://hyderabadpolice.gov.in/SheTeam&Bharosa.html",
     },
   ];
 
