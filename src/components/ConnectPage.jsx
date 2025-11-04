@@ -56,12 +56,12 @@ const ConnectPage = () => {
     {
       icon: youtube,
       label: "YouTube",
-      link: "https://www.youtube.com/@cyberpshyd3381",
+      link: "https://www.youtube.com/@cybercrimespshyd",
     },
     {
       icon: globe,
       label: "Website",
-      link: "https://hyderabadpolice.gov.in/index.html",
+      link: "https://hyderabadpolice.gov.in/cyber_crimes_hyderabad_police_station.html",
     },
   ];
 
