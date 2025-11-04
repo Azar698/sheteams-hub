@@ -56,7 +56,7 @@ const ConnectPage = () => {
     {
       icon: youtube,
       label: "YouTube",
-      link: "https://www.youtube.com/@cybercrimespshyd",
+      link: "https://www.youtube.com/@cyberpshyd3381",
     },
     {
       icon: globe,
